@@ -1,0 +1,84 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Course API",
+    "version": "1.0.0",
+    "description": "Documentação da API de cursos"
+  },
+  "paths": {
+    "/courses": {
+      "get": {
+        "summary": "Listar cursos",
+        "responses": {
+          "200": {
+            "description": "Lista de cursos"
+          }
+        }
+      },
+      "post": {
+        "summary": "Criar curso",
+        "responses": {
+          "201": {
+            "description": "Curso criado"
+          }
+        }
+      }
+    },
+    "/courses/{id}": {
+      "get": {
+        "summary": "Buscar curso por ID",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Curso encontrado"
+          }
+        }
+      },
+      "put": {
+        "summary": "Atualizar curso",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Curso atualizado"
+          }
+        }
+      },
+      "delete": {
+        "summary": "Remover curso",
+        "parameters": [
+          {
+            "name": "id",
+            "in": "path",
+            "required": true,
+            "schema": {
+              "type": "integer"
+            }
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "Curso removido"
+          }
+        }
+      }
+    }
+  }
+}
